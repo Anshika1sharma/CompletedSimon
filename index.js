@@ -4,7 +4,13 @@ function goToNextPage() {
 function goToHomePage() {
     window.location.href = "index.html"; 
 }
-
+function startgame() {
+    if (!started) {
+        $("#level-title").text("Level " + level);
+        store();
+        started = true;
+    }
+}
 var Button = ["green", "red", "yellow", "blue"];
 var gamePattern = [];
 var choosedPattern = [];
